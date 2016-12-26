@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://hiveit.com.pe/eai/ws/factsys/loginws/types" 
+	targetNamespace="http://hiveit.com.pe/eai/ws/factsys/loginws/types" 
+	elementFormDefault="qualified">
+	<xsd:element name="consultUserRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="user" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="consultUserResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codigoRespuesta" type="xsd:integer" />
+				<xsd:element name="mensajeRespuesta" type="xsd:string" />
+				<xsd:element name="user" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>
