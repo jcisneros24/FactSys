@@ -18,10 +18,10 @@ import pe.com.hiveit.eai.ws.factsys.loginws.types.ConsultUserResponse;
  * 
  */
 @WebService(
-		portName = "ebsSolicitudesSB11", 
+		portName = "ebsLoginSB11", 
 		serviceName = "LoginWSService", 
 		targetNamespace = "http://hiveit.com.pe/eai/ws/factsys/loginws", 
-		wsdlLocation = "/wsdls/LoginWS.wsdl", 
+		wsdlLocation = "/wsdl/LoginWS.wsdl", 
 		endpointInterface = "pe.com.hiveit.eai.ws.factsys.loginws.LoginWSPortType")
 @BindingType(SOAPBinding.SOAP11HTTP_BINDING)
 public class LoginWSSB11 implements LoginWSPortType {

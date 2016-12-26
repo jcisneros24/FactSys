@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "LoginWSService", targetNamespace = "http://hiveit.com.pe/eai/ws/factsys/loginws", wsdlLocation = "file:/C:/Users/jcisnera/Desktop/HiveIT/Development/generar/LoginWS.wsdl")
+@WebServiceClient(name = "LoginWSService", targetNamespace = "http://hiveit.com.pe/eai/ws/factsys/loginws", wsdlLocation = "/WEB-INF/wsdl/LoginWS.wsdl")
 public class LoginWSService
     extends Service
 {
@@ -30,7 +30,7 @@ public class LoginWSService
         try {
             URL baseUrl;
             baseUrl = pe.com.hiveit.eai.ws.factsys.loginws.LoginWSService.class.getResource(".");
-            url = new URL(baseUrl, "file:/C:/Users/jcisnera/Desktop/HiveIT/Development/generar/LoginWS.wsdl");
+            url = new URL(baseUrl, "/WEB-INF/wsdl/LoginWS.wsdl");
         } catch (MalformedURLException e) {
             logger.warning("Failed to create URL for the wsdl Location: 'file:/C:/Users/jcisnera/Desktop/HiveIT/Development/generar/LoginWS.wsdl', retrying as a local file");
             logger.warning(e.getMessage());

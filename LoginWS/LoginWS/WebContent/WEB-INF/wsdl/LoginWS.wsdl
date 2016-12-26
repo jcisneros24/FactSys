@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions name="LoginWS" 
+<definitions name="LoginWS" 
 	targetNamespace="http://hiveit.com.pe/eai/ws/factsys/loginws"
 	xmlns="http://schemas.xmlsoap.org/wsdl/"
 	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
@@ -76,11 +76,10 @@
 	<!-- Servicio SOAP versiones 11, 12 -->
 	<wsdl:service name="LoginWSService">
 		<wsdl:port name="ebsLoginSB11" binding="tns:LoginWSPortTypeSOAP11Binding">
-			<soap:address location="http://127.0.0.1:7001/Loginws/ebsLoginSB11" />
+			<soap:address location="http://127.0.0.1:8181/LoginWS/ebsLoginSB11" />
 		</wsdl:port>
 		<wsdl:port name="ebsLoginSB12" binding="tns:LoginWSPortTypeSOAP12Binding">
-			<soap12:address location="http://127.0.0.1:7001/Loginws/ebsLoginSB12" />
+			<soap12:address location="http://127.0.0.1:8181/LoginWS/ebsLoginSB12" />
 		</wsdl:port>
-	</wsdl:service>
-	
-</wsdl:definitions>
+	</wsdl:service>	
+</definitions>
