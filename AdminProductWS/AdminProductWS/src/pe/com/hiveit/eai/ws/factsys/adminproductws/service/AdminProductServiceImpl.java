@@ -1,7 +1,7 @@
 package pe.com.hiveit.eai.ws.factsys.adminproductws.service;
 
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeBeanRequest;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeBeanResponse;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeRequestBean;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeResponseBean;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.dao.XrootdbDaoImpl;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.exception.DBException;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.types.ChangeCodeRequest;
@@ -12,7 +12,7 @@ public class AdminProductServiceImpl implements AdminProductService {
 	@Override
 	public ChangeCodeResponse changeCode(ChangeCodeRequest request) {
 		ChangeCodeResponse response = null;
-		UpdateCodeBeanResponse validateUserBeanResponse = null;
+		UpdateCodeResponseBean validateUserBeanResponse = null;
 		
     	long tiempoInicio = System.currentTimeMillis();
     	String idTx ="" ;
@@ -21,9 +21,9 @@ public class AdminProductServiceImpl implements AdminProductService {
 		
     	try {
 			response = new ChangeCodeResponse();
-			validateUserBeanResponse = new UpdateCodeBeanResponse();
+			validateUserBeanResponse = new UpdateCodeResponseBean();
 			
-			UpdateCodeBeanRequest validateUserBeanRequest = new UpdateCodeBeanRequest();
+			UpdateCodeRequestBean validateUserBeanRequest = new UpdateCodeRequestBean();
 			validateUserBeanResponse = xrootdbDaoImpl.updateCode(validateUserBeanRequest);
 			
 		} catch (DBException e) {

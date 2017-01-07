@@ -1,9 +1,9 @@
 package pe.com.hiveit.eai.ws.factsys.adminproductws.dao;
 
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeBeanRequest;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeBeanResponse;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeRequestBean;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeResponseBean;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.exception.DBException;
 
 public interface XrootdbDao {
-	UpdateCodeBeanResponse updateCode(UpdateCodeBeanRequest requestDao) throws DBException;
+	UpdateCodeResponseBean updateCode(UpdateCodeRequestBean requestDao) throws DBException;
 }

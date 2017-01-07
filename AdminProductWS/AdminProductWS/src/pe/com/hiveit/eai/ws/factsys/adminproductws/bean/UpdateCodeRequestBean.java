@@ -1,6 +1,6 @@
 package pe.com.hiveit.eai.ws.factsys.adminproductws.bean;
 
-public class UpdateCodeBeanRequest {
+public class UpdateCodeRequestBean {
 	private String codArtiOld;
 	private String codArtiNew;
 	

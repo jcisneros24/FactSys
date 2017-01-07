@@ -1,6 +1,6 @@
 package pe.com.hiveit.eai.ws.factsys.adminproductws.bean;
 
-public class UpdateCodeBeanResponse {
+public class UpdateCodeResponseBean {
 	private String codRpta;
 	private String msgRpta;
 	

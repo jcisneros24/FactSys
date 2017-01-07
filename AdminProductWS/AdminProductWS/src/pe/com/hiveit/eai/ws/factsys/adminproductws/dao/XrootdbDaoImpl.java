@@ -5,8 +5,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import pe.com.hiveit.eai.ws.factsys.adminproductws.ConnectionDB;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeBeanRequest;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeBeanResponse;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeRequestBean;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeResponseBean;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.exception.DBException;
 
 public class XrootdbDaoImpl implements XrootdbDao {
@@ -15,12 +15,12 @@ public class XrootdbDaoImpl implements XrootdbDao {
 		cn = new ConnectionDB();
 	}
 	@Override
-	public UpdateCodeBeanResponse updateCode(UpdateCodeBeanRequest requestDao) throws DBException {
-		UpdateCodeBeanResponse responseDao = null;
+	public UpdateCodeResponseBean updateCode(UpdateCodeRequestBean requestDao) throws DBException {
+		UpdateCodeResponseBean responseDao = null;
 		Connection accessDB = null;
 		CallableStatement cs = null;
 		try {
-			responseDao = new UpdateCodeBeanResponse();
+			responseDao = new UpdateCodeResponseBean();
 			accessDB = cn.getConnection();
 			cs = accessDB.prepareCall("call SP_UPDATE_ARTICULOS(?,?)");
 			cs.setString(1, requestDao.getCodArtiOld());
