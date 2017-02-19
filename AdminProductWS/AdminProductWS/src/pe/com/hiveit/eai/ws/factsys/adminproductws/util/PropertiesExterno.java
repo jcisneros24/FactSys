@@ -1,5 +1,6 @@
 package pe.com.hiveit.eai.ws.factsys.adminproductws.util;
 
+@Service
 public class PropertiesExterno {
 
 	String path = "../EncryptDecryptProperties/EncryptDecrypt.properties";
@@ -15,4 +16,6 @@ public class PropertiesExterno {
 		opcDesencriptar = foreignProp.getValor("opcion.desencriptar");
 		return opcDesencriptar;
 	}
+	
+	@Val
 }
