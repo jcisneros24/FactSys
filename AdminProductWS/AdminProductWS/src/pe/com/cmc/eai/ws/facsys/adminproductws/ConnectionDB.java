@@ -1,4 +1,4 @@
-package pe.com.hiveit.eai.ws.factsys.adminproductws;
+package pe.com.cmc.eai.ws.facsys.adminproductws;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

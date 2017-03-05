@@ -1,4 +1,4 @@
-package pe.com.hiveit.eai.ws.factsys.adminproductws.exception;
+package pe.com.cmc.eai.ws.facsys.adminproductws.exception;
 
 public class BaseException extends Exception {
 	

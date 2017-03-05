@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://cmc.com.pe/eai/ws/facsys/adminproductws/types" 
+	targetNamespace="http://cmc.com.pe/eai/ws/facsys/adminproductws/types">
+	
+	<xsd:element name="changeRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codArtiOld" type="xsd:string" />
+				<xsd:element name="codArtiNew" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="changeResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="codigoRespuesta" type="xsd:string" />
+				<xsd:element name="mensajeRespuesta" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

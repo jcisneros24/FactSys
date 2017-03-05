@@ -1,4 +1,4 @@
-package pe.com.hiveit.eai.ws.factsys.adminproductws.dao;
+package pe.com.cmc.eai.ws.facsys.adminproductws.dao;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeRequestBean;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeResponseBean;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.exception.DBException;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.util.PropertiesExterno;
+import pe.com.cmc.eai.ws.facsys.adminproductws.bean.UpdateCodeRequestBean;
+import pe.com.cmc.eai.ws.facsys.adminproductws.bean.UpdateCodeResponseBean;
+import pe.com.cmc.eai.ws.facsys.adminproductws.exception.DBException;
+import pe.com.cmc.eai.ws.facsys.adminproductws.util.PropertiesExterno;
 
 @Repository
 public class XrootdbDaoImpl implements XrootdbDao {

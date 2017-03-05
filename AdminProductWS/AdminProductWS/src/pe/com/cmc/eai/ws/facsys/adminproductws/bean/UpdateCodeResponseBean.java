@@ -1,4 +1,4 @@
-package pe.com.hiveit.eai.ws.factsys.adminproductws.bean;
+package pe.com.cmc.eai.ws.facsys.adminproductws.bean;
 
 public class UpdateCodeResponseBean {
 	private String codRpta;

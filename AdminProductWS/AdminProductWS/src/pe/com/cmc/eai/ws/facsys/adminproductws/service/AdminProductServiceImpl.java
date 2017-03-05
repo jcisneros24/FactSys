@@ -1,15 +1,15 @@
-package pe.com.hiveit.eai.ws.factsys.adminproductws.service;
+package pe.com.cmc.eai.ws.facsys.adminproductws.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeRequestBean;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeResponseBean;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.dao.XrootdbDao;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.exception.DBException;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.types.ChangeCodeRequest;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.types.ChangeCodeResponse;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.util.PropertiesExterno;
+import pe.com.cmc.eai.ws.facsys.adminproductws.bean.UpdateCodeRequestBean;
+import pe.com.cmc.eai.ws.facsys.adminproductws.bean.UpdateCodeResponseBean;
+import pe.com.cmc.eai.ws.facsys.adminproductws.dao.XrootdbDao;
+import pe.com.cmc.eai.ws.facsys.adminproductws.exception.DBException;
+import pe.com.cmc.eai.ws.facsys.adminproductws.types.ChangeRequest;
+import pe.com.cmc.eai.ws.facsys.adminproductws.types.ChangeResponse;
+import pe.com.cmc.eai.ws.facsys.adminproductws.util.PropertiesExterno;
 
 @Service
 public class AdminProductServiceImpl implements AdminProductService {
@@ -21,8 +21,8 @@ public class AdminProductServiceImpl implements AdminProductService {
 	private PropertiesExterno propertiesExterno;
 	
 	@Override
-	public ChangeCodeResponse changeCode(ChangeCodeRequest request) {
-		ChangeCodeResponse response = null;
+	public ChangeResponse change(ChangeRequest request) {
+		ChangeResponse response = null;
 		UpdateCodeResponseBean updateCodeResponseBean = null;
 		
     	long tiempoInicio = System.currentTimeMillis();
@@ -35,7 +35,7 @@ public class AdminProductServiceImpl implements AdminProductService {
     	String codArtiNew = request.getCodArtiNew();
     	
     	try {
-			response = new ChangeCodeResponse();
+			response = new ChangeResponse();
 			updateCodeResponseBean = new UpdateCodeResponseBean();
 			
 			if((codArtiOld !=null && !codArtiOld.isEmpty()) && (codArtiNew !=null && codArtiNew.isEmpty())){
