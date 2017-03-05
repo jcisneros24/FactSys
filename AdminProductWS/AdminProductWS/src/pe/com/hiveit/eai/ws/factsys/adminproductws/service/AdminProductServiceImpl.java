@@ -1,14 +1,25 @@
 package pe.com.hiveit.eai.ws.factsys.adminproductws.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeRequestBean;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.bean.UpdateCodeResponseBean;
-import pe.com.hiveit.eai.ws.factsys.adminproductws.dao.XrootdbDaoImpl;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.dao.XrootdbDao;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.exception.DBException;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.types.ChangeCodeRequest;
 import pe.com.hiveit.eai.ws.factsys.adminproductws.types.ChangeCodeResponse;
+import pe.com.hiveit.eai.ws.factsys.adminproductws.util.PropertiesExterno;
 
+@Service
 public class AdminProductServiceImpl implements AdminProductService {
-	XrootdbDaoImpl xrootdbDaoImpl = new XrootdbDaoImpl();
+	
+	@Autowired
+	private XrootdbDao xrootdbDao;
+	
+	@Autowired
+	private PropertiesExterno propertiesExterno;
+	
 	@Override
 	public ChangeCodeResponse changeCode(ChangeCodeRequest request) {
 		ChangeCodeResponse response = null;
@@ -32,11 +43,11 @@ public class AdminProductServiceImpl implements AdminProductService {
 				updateCodeRequestBean.setCodArtiOld(codArtiOld);
 				updateCodeRequestBean.setCodArtiNew(codArtiNew);
 				
-				updateCodeResponseBean = xrootdbDaoImpl.updateCode(updateCodeRequestBean);
+				updateCodeResponseBean = xrootdbDao.updateCode(updateCodeRequestBean);
 				String codRptaUpdateCode = updateCodeResponseBean.getCodRpta();
 				String msgRptaUpdateCode = updateCodeResponseBean.getMsgRpta();
 				
-				if(codRptaUpdateCode.equals("0")){
+				if(codRptaUpdateCode.equals(propertiesExterno.codigoExito)){
 					System.out.println(codRptaUpdateCode);
 					System.out.println(msjTx + msgRptaUpdateCode);
 				}else{

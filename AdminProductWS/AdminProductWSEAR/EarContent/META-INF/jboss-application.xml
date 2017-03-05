@@ -1,0 +1,19 @@
+<application 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+    
+    <application-name>AdminProductWS</application-name>
+   
+  	<initialize-in-order>false</initialize-in-order>
+ 
+  	<module><ejb>AdminProductWS.jar</ejb></module>
+ 
+  <module>
+        <web>
+            <web-uri>AdminProductWS.war</web-uri>
+            <context-root>AdminProductWS</context-root>
+        </web>
+    </module>
+ 
+</application>
