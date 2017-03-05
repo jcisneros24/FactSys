@@ -15,7 +15,7 @@
 					       http://www.springframework.org/schema/jee/spring-jee-3.1.xsd">
 
 	<context:annotation-config />
-    <context:component-scan base-package="pe.com.claro.eai.ws.portalclaro.administrarcodigossecretosws" />   
+    <context:component-scan base-package="pe.com.hiveit.eai.ws.factsys.adminproductws" />   
     <context:property-placeholder location="file:${claro.properties}AdministrarCodigosSecretosWS.properties" />  
        
 	<import resource="applicationDatasource.xml" />
