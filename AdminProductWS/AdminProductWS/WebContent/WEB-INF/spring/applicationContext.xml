@@ -16,7 +16,7 @@
 
 	<context:annotation-config />
     <context:component-scan base-package="pe.com.hiveit.eai.ws.factsys.adminproductws" />   
-    <context:property-placeholder location="file:${claro.properties}AdministrarCodigosSecretosWS.properties" />  
+    <context:property-placeholder location="file:${cmc.properties}AdminProductWSProperties.properties" />  
        
 	<import resource="applicationDatasource.xml" />
     <import resource="applicationProxyWs.xml" /> 
